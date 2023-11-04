@@ -1,0 +1,23 @@
+id: google-docs-drive-groups
+
+info:
+  name: Google Docs drive groups 
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: docs,google
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "docs.google.com"
+          - "drive.google.com"
+          - "groups.google.com"
