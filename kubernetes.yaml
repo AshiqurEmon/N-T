@@ -1,22 +1,22 @@
-id: google-docs-drive
+id: kubernetes
 
 info:
-  name: Google Docs
-  author: DhiyaneshDK
+  name: kubernetes
+  author: Ashiqur Emon
   severity: info
   metadata:
     verified: true
     max-request: 1
-  tags: docs,google
+  tags: kubernetes
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}:10250/pods"
+      - "{{BaseURL}}:6443/pods"
 
     extractors:
       - type: regex
         part: body
         regex:
-          - "docs.google.com"
-          - "drive.google.com"
+          - "apiVersion"

@@ -1,13 +1,13 @@
-id: google-docs-drive
+id: js-var
 
 info:
-  name: Google Docs
-  author: DhiyaneshDK
+  name: js-var
+  author: Ashiqur Emon
   severity: info
   metadata:
     verified: true
     max-request: 1
-  tags: docs,google
+  tags: js
 
 http:
   - method: GET
@@ -18,5 +18,4 @@ http:
       - type: regex
         part: body
         regex:
-          - "docs.google.com"
-          - "drive.google.com"
+          - "var [a-z0-9_]+\\=."

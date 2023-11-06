@@ -1,13 +1,13 @@
-id: google-docs-drive
+id: aws-keys
 
 info:
-  name: Google Docs
-  author: DhiyaneshDK
+  name: aws keys
+  author: Ashiqur Emon
   severity: info
   metadata:
     verified: true
     max-request: 1
-  tags: docs,google
+  tags: aws
 
 http:
   - method: GET
@@ -18,5 +18,4 @@ http:
       - type: regex
         part: body
         regex:
-          - "docs.google.com"
-          - "drive.google.com"
+          - "([^A-Z0-9]|^)(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{12,}"

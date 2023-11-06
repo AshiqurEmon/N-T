@@ -1,0 +1,37 @@
+id: third-party-vendors
+
+info:
+  name: third-party-vendors
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: third-party-vendors
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "codepad.co"
+          - "scribd.com"
+          - "npmjs.com"
+          - "npm.runkit.com"
+          - "libraries.io"
+          - "coggle.it"
+          - "papaly.com"
+          - "trello.com"
+          - "prezi.com"
+          - "jsdelivr.net"
+          - "pastebin.com"
+          - "repl.it"
+          - "gitter.im"
+          - "bitbucket.org"
+          - "atlassian.net"
+          - "gitlab.com"
+          - "github.com"

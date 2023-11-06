@@ -1,0 +1,35 @@
+id: Truffle
+
+info:
+  name: Truffle
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: truffle
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "-----BEGIN RSA PRIVATE KEY-----"
+          - "-----BEGIN DSA PRIVATE KEY-----"
+          - "-----BEGIN EC PRIVATE KEY-----"
+          - "-----BEGIN PGP PRIVATE KEY BLOCK-----"
+          - "ssh-rsa A*"
+          - "AKIA[0-9A-Z]{16}"
+          - "AKIA[0-9A-Z]{16}"
+          - "EAACEdEose0cBA[0-9A-Za-z]+"
+          - "apps.googleusercontent.com"
+          - "sk_live_[0-9a-z]{32}"
+          - "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}"
+          - "sk_live_[0-9a-zA-Z]{24}"
+          - "rk_live_[0-9a-zA-Z]{24}"
+          - "SK[0-9a-fA-F]{32}"
+          - "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].*[1-9][0-9]+-[0-9a-zA-Z]{40}"

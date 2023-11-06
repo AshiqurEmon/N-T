@@ -1,0 +1,96 @@
+id: interesting-extention
+
+info:
+  name: interesting extentionn
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: interesting-extention
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - ".action"
+          - ".adr"
+          - ".ascx"
+          - ".asmx"
+          - ".axd"
+          - ".backup"
+          - ".bak" 
+          - ".bkf"
+          - ".bkp"
+          - ".bok"
+          - ".achee"
+          - ".cfg"
+          - ".cfm"
+          - ".cgi"
+          - ".cnf"
+          - ".conf"
+          - ".config"
+          - ".crt"
+          - ".csr"
+          - ".csv"
+          - ".dat"
+          - ".doc"
+          - ".docx"
+          - ".eml"
+          - ".env"
+          - ".exe"
+          - ".gz"
+          - ".ica"
+          - ".inf"
+          - ".ini"
+          - ".java"
+          - ".json"
+          - ".key"
+          - ".log"
+          - ".lst"
+          - ".mai"
+          - ".mbox"
+          - ".mbx"
+          - ".md"
+          - ".mdb"
+          - ".nsf"
+          - ".old"
+          - ".ora"
+          - ".pac"
+          - ".passwd"
+          - ".pcf"
+          - ".pdf"
+          - ".pem"
+          - ".pgp"
+          - ".pl"
+          - ".plist"
+          - ".bin"
+          - ".pwd"
+          - ".rdp"
+          - ".reg"
+          - ".rtf"
+          - ".skr"
+          - ".sql"
+          - ".swf"
+          - ".tpl"
+          - ".txt"
+          - ".url"
+          - ".wml"
+          - ".xls"
+          - ".xlsx"
+          - ".xml"
+          - ".xsd"
+          - ".yml"
+          - ".yaml"
+          - ".zip"
+          - ".rar"
+          - ".gz"
+          - ".cache"
+          - ".bkp"
+          - ".backup"
+          - ".secret"

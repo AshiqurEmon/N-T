@@ -1,0 +1,23 @@
+id: elastic-search
+
+info:
+  name: elastic-search
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: elastic-search
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}:9200"
+      - "{{BaseURL}}:9201"
+      - "{{BaseURL}}:9202"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "cluster_name"

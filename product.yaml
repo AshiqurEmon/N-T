@@ -1,0 +1,43 @@
+id: product
+
+info:
+  name: product
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: product
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "django"
+          - "laravel"
+          - "symfony"
+          - "graphite"
+          - "grafana"
+          - "X-Drupal-Cache"
+          - "struts"
+          - "code ?igniter"
+          - "cake ?php"
+          - "grails"
+          - "elastic ?search"
+          - "kibana"
+          - "log ?stash"
+          - "tomcat"
+          - "jenkins"
+          - "hudson"
+          - "com.atlassian.jira"
+          - "Apache Subversion"
+          - "Chef Server"
+          - "RabbitMQ Management"
+          - "Mongo"
+          - "Travis CI - Enterprise"
+          - "BMC Remedy"

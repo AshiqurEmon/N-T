@@ -1,0 +1,23 @@
+id: digitalocean-spaces-GCP-Azure-Blob
+
+info:
+  name: digitalocean-spaces-GCP-Azure-Blob
+  author: Ashiqur Emon
+  severity: info
+  metadata:
+    verified: true
+    max-request: 1
+  tags: digitalocean-spaces-GCP-Azure-Blob
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "digitaloceanspaces.com"
+          - "storage.googleapis.com"
+          - "blob.core.windows.net"
