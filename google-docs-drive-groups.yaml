@@ -1,4 +1,4 @@
-id: google-docs-drive
+id: google-docs-drive-slides-sheets
 
 info:
   name: Google Docs
@@ -20,3 +20,5 @@ http:
         regex:
           - "docs.google.com"
           - "drive.google.com"
+          - "slides.google.com"
+          - "sheets.google.com"
