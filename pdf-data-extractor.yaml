@@ -1,0 +1,82 @@
+id: pdfsecret
+
+info:
+  name: pdf
+  author: panch0r3d
+  severity: info
+  tags: misc,pdf
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "Medical"
+          - "Employee"
+          - "Full name"
+          - "pass"
+          - "firstname"
+          - "fullname"
+          - "Social Security numbers"
+          - "Date of birth"
+          - "Address information"
+          - "Phone numbers"
+          - "Email addresses"
+          - "Bank account details"
+          - "Credit card numbers"
+          - "Financial transactions"
+          - "Salary information"
+          - "Tax identification numbers"
+          - "Medical records"
+          - "Health insurance details"
+          - "Prescription information"
+          - "Employee IDs"
+          - "Payroll details"
+          - "Performance reviews"
+          - "Human Resources records"
+          - "Employment contracts"
+          - "Contracts and agreements"
+          - "Legal correspondence"
+          - "Compliance reports"
+          - "Intellectual property information"
+          - "Customer IDs"
+          - "Purchase history"
+          - "Contact details"
+          - "Customer support communications"
+          - "Trade secrets"
+          - "Research and development data"
+          - "Strategic business plans"
+          - "Proprietary algorithms or formulas"
+          - "Mergers and acquisitions information"
+          - "Usernames and passwords"
+          - "Access codes and keys"
+          - "Authentication details"
+          - "Security policies and procedures"
+          - "Network architecture diagrams"
+          - "Vulnerability assessments and reports"
+          - "Audit Trails and Logs"
+          - "Fingerprints"
+          - "Retina scans"
+          - "Facial recognition data"
+          - "Patents"
+          - "Trademarks"
+          - "Internal use only"
+          - "Copyrighted materials"
+          - "Student IDs"
+          - "Transcripts"
+          - "Academic performance records"
+          - "Passport numbers"
+          - "Drivers license details"
+          - "Internal memos"
+          - "Corporate emails"
+          - "Instant messaging logs"
+          - "Keys used for encrypting sensitive data"
+          - "Personal biographies"
+          - "Confidential"
+          - "Internal"
+          - "Family details"
+          - "Information obtained under non-disclosure agreements"
