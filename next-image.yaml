@@ -1,0 +1,18 @@
+id: next-image-url-param-required
+
+info:
+  name: Next.js Image Endpoint - Missing URL Parameter
+  author: your-name
+  severity: info
+  description: Detects when accessing `/_next/image` returns a response indicating the required "url" parameter is missing.
+  tags: nextjs,misc
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_next/image"
+
+    matchers:
+      - type: word
+        words:
+          - '"url" parameter is required'
