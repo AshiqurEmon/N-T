@@ -1,0 +1,31 @@
+id: next-image-url-param-ssrf
+
+info:
+  name: Next.js Image Endpoint - SSRF via URL Parameter
+  author: your-name
+  severity: high
+  description: |
+    Detects if the Next.js /_next/image endpoint fetches external resources via the 'url' parameter, potentially allowing Server-Side Request Forgery (SSRF).
+  reference:
+    - https://nextjs.org/docs/api-reference/next/image
+  tags: nextjs,ssrf,oast
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_next/image?url=https://{{interactsh-url}}/ping.png&w=1920&q=75"
+    
+    stop-at-first-match: true
+    
+    matchers:
+      - type: word
+        part: interactsh_protocol
+        words:
+          - "http"
+        condition: and
+    
+    extractors:
+      - type: regex
+        part: interactsh_request
+        regex:
+          - ".*"
